@@ -1,0 +1,20 @@
+[package]
+name = "laios"
+version = "0.1.0"
+authors = ["Murray Campbell <murrayirc@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+ash = "0.29.0"
+winit = "0.19.1"
+cgmath = "0.17.0"
+image = "0.21.1"
+memoffset = "0.3.0"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+metal = "0.14.0"
+cocoa = "0.18.4"
+objc  = "0.2.6"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+winapi = { version = "0.3.7", features = ["windef", "libloaderapi"] }
